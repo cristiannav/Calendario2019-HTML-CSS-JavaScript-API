@@ -1,0 +1,90 @@
+/*ESTILOS DE CSS */
+
+#rect1{
+  margin:0px auto;
+  background-color: #ffff;
+  border-color: #97b6dc;
+  border-style: solid;
+  border-width: 7px;
+  text-align: center;
+  width: 450px;
+  height: 330px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#rect2{
+  margin:0px auto;
+  background-color: #ffff;
+  text-align: center;
+  width: 300px;
+  height: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  color: #3f4847
+}
+
+h4{
+  position: relative;
+  top: 25px;
+  margin-right: 12%;
+  font-size: 20px;
+}
+
+.btn1{
+  position: relative;
+  float: left;
+  top: 13px;
+  right: 5px;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #97b6dc;
+  background-color: #ffff;
+  border-radius: 9px;
+  border: 1px solid #97b6dc;
+}
+
+.btn1:hover{
+  color: #ffff;
+  background-color: #97b6dc;
+  cursor: pointer;
+}
+
+.btn2{
+  position: relative;
+  float: right;
+  bottom: 35px;
+  left: 8px;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #97b6dc;
+  background-color: #ffff;
+  border-radius: 9px;
+  border: 1px solid #97b6dc;
+}
+
+.btn2:hover{
+  color: #ffff;
+  background-color: #97b6dc;
+  cursor: pointer;
+}
+
+.table1{
+  margin:0px auto;
+  background-color: #ffff;
+  text-align: center;
+  width: 450px;
+  height: 210px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  color: #3f4847;
+}

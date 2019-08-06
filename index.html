@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calendar</title>
+    <script   src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+
+    <section class="container">
+
+      <div id="rect1">
+        <div id="rect2">
+          <button type="button" name="button" class="btn1" onclick="hacer_click1()"><</button> <!--Se crea un botón -->
+          <div id="mes"></div> <!--Se crea un el elemento que contendrá el mes con el año -->
+          <button type="button" name="button" class="btn2" onclick="hacer_click2()">></button> <!--Se crea un botón -->
+        </div>
+        <table class="table1"> <!--Se crea la tabla -->
+	         <tr>
+		           <th>D</th>
+		           <th>L</th>
+		           <th>M</th>
+               <th>X</th>
+		           <th>J</th>
+		           <th>V</th>
+               <th>S</th>
+	         </tr>
+	          <tr id="fila1">
+		            <td id="f1a"></td>
+	    	        <td id="f1b"></td>
+	    	        <td id="f1c"></td>
+                <td id="f1d"></td>
+	    	        <td id="f1e"></td>
+                <td id="f1f"></td>
+                <td id="f1g"></td>
+	          </tr>
+	          <tr id="fila2">
+                <td id="f2a"></td>
+                <td id="f2b"></td>
+                <td id="f2c"></td>
+                <td id="f2d"></td>
+                <td id="f2e"></td>
+                <td id="f2f"></td>
+                <td id="f2g"></td>
+	          </tr>
+            <tr id="fila3">
+                <td id="f3a"></td>
+                <td id="f3b"></td>
+                <td id="f3c"></td>
+                <td id="f3d"></td>
+                <td id="f3e"></td>
+                <td id="f3f"></td>
+                <td id="f3g"></td>
+	          </tr>
+            <tr id="fila4">
+                <td id="f4a"></td>
+                <td id="f4b"></td>
+                <td id="f4c"></td>
+                <td id="f4d"></td>
+                <td id="f4e"></td>
+                <td id="f4f"></td>
+                <td id="f4g"></td>
+	          </tr>
+            <tr id="fila5">
+                <td id="f5a"></td>
+                <td id="f5b"></td>
+                <td id="f5c"></td>
+                <td id="f5d"></td>
+                <td id="f5e"></td>
+                <td id="f5f"></td>
+                <td id="f5g"></td>
+	          </tr>
+            <tr id="fila5">
+                <td id="f6a"></td>
+            </tr>
+        </table>
+      </div>
+
+
+      <script src="js/script.js"></script>
+
+      <script>
+
+      fetch('http://nolaborables.com.ar/api/v1/2019') //Se llama con fetch a la api
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    var divOut = document.getElementById('feriados'); //Se guarda en una variable el elemento capturado
+    var feriados = data;
+    var txtOut = "";
+    for (var k in feriados) { // Se hace un bucle para cada una de las propiedades
+      txtOut += `<b>${feriados[k].motivo}</b><br />`;
+      txtOut += `Tipo: ${feriados[k].tipo}<br />`;
+      txtOut += `Dia: ${feriados[k].dia}<br />`;
+      txtOut += `Mes: ${feriados[k].mes}<br />`;
+    }
+    divOut.innerHTML = txtOut; // Se inserta en el html
+  });
+
+      </script>
+
+      <div id="feriados"></div>
+
+  </body>
+</html>
